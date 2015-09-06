@@ -1,0 +1,6 @@
+(load "leo-package.el")
+(load "leo-visuals.el")
+(load "leo-init-plugins.el")
+(load "leo-keys.el")
+(load "leo-custom-funs.el")
+(load "leo-haskell.el")
