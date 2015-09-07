@@ -1,3 +1,8 @@
+
+;; Make sure we can see errors
+(add-hook 'after-init-hook
+          '(lambda () (setq debug-on-error t)))
+
 (load "leo-package.el")
 (load "leo-visuals.el")
 (load "leo-init-plugins.el")

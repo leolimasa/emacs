@@ -30,14 +30,9 @@ your recently and most frequently used commands.")
 (setq sr-speedbar-right-side nil)
 (setq speedbar-show-unknown-files t)
 (sr-speedbar-open)
-
-;; Disable numbering for the sr-speedbar
-(sr-speedbar-select-window)
-(linum-mode -1)
-
-;; Company
-(setq company-dabbrev-downcase nil)
+(sr-speedbar-refresh-turn-off)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Window numbering support
 (window-numbering-mode 1)
+

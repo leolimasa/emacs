@@ -11,9 +11,6 @@
 
 (package-initialize) 
 
-;; Load external packages
-(load "powerline.el")
-
 (require 'smex)
 (require 'window-numbering)
 (require 'company)
@@ -21,3 +18,5 @@
 (require 'haskell-cabal)
 (require 'evil)
 (require 'sr-speedbar)
+(require 'ido)
+(require 'powerline)

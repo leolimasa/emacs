@@ -18,3 +18,11 @@
   (interactive)
   (shell-command-to-string "\"c:/Program Files/TortoiseSVN/bin/TortoiseProc.exe\" /command:commit /path:.")
   )
+
+(defun refresh-sidebar ()
+  (interactive)
+  (sr-speedbar-refresh)
+  )
+
+(defun desktop-font () (interactive) (set-face-attribute 'default nil :height 180))
+(defun laptop-font () (interactive) (set-face-attribute 'default nil :height 120))
