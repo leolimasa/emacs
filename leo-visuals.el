@@ -15,14 +15,8 @@
 (set-frame-font "Menlo:pixelsize=16")
 
 ;; Modeline
-(setq sml/theme 'powerline)
-(setq powerline-arrow-shape 'curve)
-(setq powerline-default-separator-dir '(right . left))
-(custom-set-faces
- '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
-(setq powerline-color1 "grey22")
-(setq powerline-color2 "grey40")
+(setq ns-use-srgb-colorspace nil)
+(powerline-evil-theme)
 
 ;; Disable toolbar
 (tool-bar-mode -1)
@@ -55,7 +49,5 @@
    `(company-tooltip-selection ((t (:inherit font-lock-function-name-face))))
    `(company-tooltip-common ((t (:inherit font-lock-constant-face))))))
 
-;; Powerline
-(require 'powerline)
-(powerline-center-evil-theme)
-
+;; Make cursor ridiculously visible
+(set-cursor-color "#00ff00")
