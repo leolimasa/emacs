@@ -11,17 +11,18 @@
 (evil-mode 1)
 
 ;; Sr-speedbar
-;(defun select-next-window ()
-;  (other-window 1))
-;
-;(defun my-sr-speedbar-open-hook ()
-;  (add-hook 'speedbar-before-visiting-file-hook 'select-next-window t)
-;  (add-hook 'speedbar-before-visiting-tag-hook 'select-next-window t))
+(defun select-next-window ()
+  (other-window 2))
 
-;(advice-add 'sr-speedbar-open :after #'my-sr-speedbar-open-hook)
+(defun my-sr-speedbar-open-hook ()
+  (add-hook 'speedbar-before-visiting-file-hook 'select-next-window t)
+  (add-hook 'speedbar-before-visiting-tag-hook 'select-next-window t))
+
+(advice-add 'sr-speedbar-open :after #'my-sr-speedbar-open-hook)
 (setq sr-speedbar-right-side nil)
 (setq speedbar-show-unknown-files t)
 (sr-speedbar-open)
+(linum-mode -1)
 (sr-speedbar-refresh-turn-off)
 (add-hook 'after-init-hook 'global-company-mode)
 
@@ -38,6 +39,7 @@
 	(bookmark-bmenu-list)
 	(switch-to-buffer "*Bookmark List*")
 	(set-window-parameter (selected-window) 'no-other-window t)
+	(linum-mode -1)
 )
 (add-hook 'after-init-hook
 	  '(lambda () (show-bookmarks)))

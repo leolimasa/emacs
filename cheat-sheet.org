@@ -34,13 +34,18 @@
 | C-r     | search backwards                                           |
 | C-M-s   | regex search                                               |
 | C-M-r   | regex search backward                                      |
-| M-%     | replace                                                    | 
+| M-%     | replace                                                    |
+|         |                                                            |
+
 ** Bookmarks
 | Key     | Action                |
 |---------+-----------------------|
 | C-x r m | set bookmark at point |
 | C-x r b | go to bookmark        |
 | C-x r l | list bookmarks        |
+| d       | mark for deletion     |
+| x       | delete marked         |
+| r       | rename bookmark       |
 ** Advanced
 | Key   | Action                      |
 |-------+-----------------------------|
