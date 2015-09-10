@@ -26,3 +26,8 @@
 
 (defun desktop-font () (interactive) (set-face-attribute 'default nil :height 180))
 (defun laptop-font () (interactive) (set-face-attribute 'default nil :height 120))
+
+(defun lock-window ()
+  (interactive)
+  (set-window-parameter (selected-window) 'no-other-window t)
+  )
