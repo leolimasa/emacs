@@ -6,7 +6,7 @@
 
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 (global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C-=") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
 (global-set-key (kbd "TAB") 'self-insert-command)
 (global-set-key [f1] 'ccl-run)
