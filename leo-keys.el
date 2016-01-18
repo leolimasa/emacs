@@ -2,6 +2,7 @@
 ;;
 ;; Key assignments
 
+(require 'evil)
 
 (global-set-key (kbd "C-<tab>") 'dabbrev-expand)
 (global-set-key (kbd "M-x") 'smex)
@@ -14,7 +15,6 @@
 (global-set-key [M-up] 'windmove-up)              ; move to upper window
 (global-set-key [M-down] 'windmove-down)          ; move to lower window
 (global-set-key [escape] 'evil-exit-emacs-state)
-(global-set-key [f5] 'refresh-sidebar)
 
 ;; Support for pressing ESC and quitting a command
 (defun minibuffer-keyboard-quit ()

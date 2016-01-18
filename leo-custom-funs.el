@@ -19,15 +19,28 @@
   (shell-command-to-string "\"c:/Program Files/TortoiseSVN/bin/TortoiseProc.exe\" /command:commit /path:.")
   )
 
-(defun refresh-sidebar ()
-  (interactive)
-  (sr-speedbar-refresh)
-  )
-
 (defun desktop-font () (interactive) (set-face-attribute 'default nil :height 180))
 (defun laptop-font () (interactive) (set-face-attribute 'default nil :height 120))
 
-(defun lock-window ()
+
+(defun open-in-browser()
   (interactive)
-  (set-window-parameter (selected-window) 'no-other-window t)
+  (let ((filename (buffer-file-name)))
+    (browse-url (concat "file://" filename))))
+
+(defun tit(title)
+  (interactive "fNew title")
+  (setq frame-title-format title)
   )
+
+(defun create-shell ()
+    "creates a shell with a given name"
+    (interactive);; "Prompt\n shell name:")
+    (let ((shell-name (read-string "shell name: " nil)))
+    (shell (concat "*shell :: " shell-name "*"))))
+  
+(defun curshell ()
+    "creates a shell where the name is the current file"
+    (interactive);; "Prompt\n shell name:")
+    (let ((shell-name (expand-file-name default-directory)))
+    (shell (concat "*shell :: " shell-name "*"))))
