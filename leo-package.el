@@ -20,3 +20,4 @@
 (require 'sr-speedbar)
 (require 'ido)
 (require 'powerline)
+(require 'popwin)
