@@ -75,3 +75,6 @@ your recently and most frequently used commands.")
 
 ;; Window numbering support
 (window-numbering-mode 1)
+
+;; Funda haxe mode association
+(add-to-list 'auto-mode-alist '("\\.hx\\'" . funda-haxe-mode))
