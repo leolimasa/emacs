@@ -21,3 +21,4 @@
 (require 'ido)
 (require 'powerline)
 (require 'popwin)
+(require 'fill-column-indicator)

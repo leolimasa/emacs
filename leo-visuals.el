@@ -13,7 +13,7 @@
 ;;(set-face-font 'default "Inconsolata-12:antialias=natural")
 ;;(set-face-font 'default "Menlo-12:antialias=natural")
 ;; (set-frame-font "Menlo:pixelsize=16")
-(set-frame-font "Consolas:pixelsize=17:antialias=subpixel")
+(set-frame-font "Consolas:pixelsize=14:antialias=subpixel")
 
 ;; Modeline
 (setq ns-use-srgb-colorspace nil)

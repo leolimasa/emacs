@@ -4,6 +4,12 @@
 
 (require 'js-doc)
 
+;; Projectile
+(projectile-global-mode t)
+
+;; Pair braces
+(electric-pair-mode 1)
+
 ;; IDO
 (require 'ido)
 (setq ido-enable-flex-matching t)
@@ -25,16 +31,6 @@ your recently and most frequently used commands.")
 (setq company-dabbrev-downcase nil)
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; Window numbering support
-(window-numbering-mode 1)
-
-
-; Show bookmarks when it's all done
-(defun show-bookmarks ()
-	(setq inhibit-splash-screen t)
-	(require 'bookmark)
-	;(select-window-2)
-	;(split-window-below)
 ;; Supposedely makes things faster
 (setq jit-lock-defer-time 0.10)
 	;(set-window-parameter (selected-window) 'no-other-window t)
@@ -44,7 +40,6 @@ your recently and most frequently used commands.")
 ;;(push '("*GHC Error*" :height 20) popwin:special-display-config)
 
 ;; Set path correctly
-
 (defun setunixpath () 
 (setenv "PATH"
   (concat
@@ -63,3 +58,20 @@ your recently and most frequently used commands.")
 	(setunixpath)))
 ;; Puts backup files somewhere else
 (setq backup-directory-alist `(("." . "~/.saves")))
+
+; Show bookmarks when it's all done
+(defun show-bookmarks ()
+	(setq inhibit-splash-screen t)
+	(require 'bookmark)
+	;(select-window-2)
+	(split-window-below)
+	(bookmark-bmenu-list)
+	(switch-to-buffer "*Bookmark List*")
+	(set-window-parameter (selected-window) 'no-other-window t)
+	(linum-mode -1)
+)
+(add-hook 'after-init-hook
+	  '(lambda () (show-bookmarks)))
+
+;; Window numbering support
+(window-numbering-mode 1)

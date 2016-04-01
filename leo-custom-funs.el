@@ -20,7 +20,7 @@
   )
 
 (defun desktop-font () (interactive) (set-face-attribute 'default nil :height 180))
-(defun laptop-font () (interactive) (set-face-attribute 'default nil :height 120))
+(defun laptop-font () (interactive) (set-face-attribute 'default nil :height 145))
 
 
 (defun open-in-browser()

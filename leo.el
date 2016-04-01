@@ -7,6 +7,7 @@
 (load "leo-visuals.el")
 (load "leo-init-plugins.el")
 (load "leo-keys.el")
+(load "leo-tabs.el")
 (load "leo-custom-funs.el")
 (load "leo-haskell.el")
 
