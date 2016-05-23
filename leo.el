@@ -11,4 +11,5 @@
 (load "leo-custom-funs.el")
 (load "leo-haskell.el")
 (load "funda-haxe-mode.el")
+(load "leo-elm.el")
 
