@@ -22,14 +22,13 @@
 (defun desktop-font () (interactive) (set-face-attribute 'default nil :height 180))
 (defun laptop-font () (interactive) (set-face-attribute 'default nil :height 120))
 
-
 (defun open-in-browser()
   (interactive)
   (let ((filename (buffer-file-name)))
     (browse-url (concat "file://" filename))))
 
 (defun tit(title)
-  (interactive "fNew title")
+  (interactive "sNew title: ")
   (setq frame-title-format title)
   )
 

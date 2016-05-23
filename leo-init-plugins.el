@@ -1,7 +1,6 @@
 ;; leo_init_plugins.el
 ;;
 ;; Initializes all the plugins and modes
-
 (require 'js-doc)
 
 ;; IDO
@@ -24,7 +23,6 @@ your recently and most frequently used commands.")
 
 ;; Window numbering support
 (window-numbering-mode 1)
-
 
 ;; Supposedely makes things faster
 (setq jit-lock-defer-time 0.10)
