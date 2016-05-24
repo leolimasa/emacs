@@ -78,3 +78,8 @@ your recently and most frequently used commands.")
 
 ;; Funda haxe mode association
 (add-to-list 'auto-mode-alist '("\\.hx\\'" . funda-haxe-mode))
+
+;; Set path correctly on MAC
+;; You'll need to install exec-path-from-shell for this to work
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
